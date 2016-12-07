@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+/*  To Remove Gaps between Boxes AA */
+        
+        body {
+            font-size: 0;
+        }
+        
+        .box1 {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            font-size: 16px;
+            /*    margin-left: -4px;*/
+            /*            float: left;*/
+        }
+        
+/*        Terrible Center AA */
+        
+        .container {
+           font-size: 0;
+        }
+        
+        .box2 {
+            display: inline-block;
+            vertical-align: middle;
+            width: 300px;
+            height: 500px;
+            overflow: auto;
+            background-color: blue;
+            font-size: 0;
+        }
+        
+        .box2::before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+        
+        .box2 .content {
+            vertical-align: middle;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!--Eliminate Gaps between Boxes AA-->
+   
+    <div class="box1">Box 1</div>
+    <div class="box1">Box 1</div>
+    <div class="box1">Box 1</div>
+    <div class="box1">Box 1</div>
+
+<!--Terrible Center AA-->
+   
+    <div class="container">
+        <div class="box2">
+            <div class="content">
+                <h1>Box 2</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis consequatur, illum laboriosam delectus quae earum adipisci alias possimus, obcaecati ab impedit nam dolorum voluptatibus ipsam excepturi aperiam necessitatibus deserunt doloribus?</p>
+            </div>
+        </div>
+   
+        <div class="box2">
+            <div class="content">
+                <h1>Box 2</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis consequatur, illum laboriosam delectus quae earum adipisci alias possimus, obcaecati ab impedit nam dolorum voluptatibus ipsam excepturi aperiam necessitatibus deserunt doloribus?</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
